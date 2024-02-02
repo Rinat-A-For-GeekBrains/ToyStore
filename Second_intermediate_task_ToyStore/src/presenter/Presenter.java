@@ -9,26 +9,31 @@ public class Presenter {
 
     public Presenter(View ui) {
         consoleUI = ui;
+        this.service = new Service();
     }
 
-    public void addId()  {
-        consoleUI.print("Введите ID игрушки");}
+    public int addId() {
+        consoleUI.print("Введите ID игрушки");
         int t_id = Integer.parseInt(consoleUI.read());
-        public void addName(){
-        consoleUI.print("Введите название игрушки");
-        String name = consoleUI.read();}
-        public void addWright(){
-        consoleUI.print("Введите вес игрушки");
-        int weight = Integer.parseInt(consoleUI.read());}
+        return t_id;
+    }
 
+    public String addName() {
         consoleUI.print("Введите название игрушки");
         String name = consoleUI.read();
+        return name;
+    }
 
-
-
-
-        String[] fullName = name.split(" ");
-        String lastName = fullName[0];
-        if (fullName.length != 3){
-            throw new NameException();
+    public int addWeight() {
+        consoleUI.print("Введите вес игрушки");
+        int weight = Integer.parseInt(consoleUI.read());
+        return weight;
+    }
 }
+
+
+
+
+
+
+

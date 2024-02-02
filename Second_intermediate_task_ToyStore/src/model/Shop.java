@@ -9,9 +9,12 @@ public class Shop {
     Toy toy;
     private List<Toy> shopList;
 
-    public Shop() {
+    public void addToy() {
+        Toy toy = new Toy();
         shopList = new ArrayList();
-    private void addToy(Toy toy) {
+        int t_id = 0;
+        toy.setT_id(t_id);
+
 
     }
 
