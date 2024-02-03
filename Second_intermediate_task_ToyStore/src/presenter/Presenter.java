@@ -9,26 +9,17 @@ public class Presenter {
 
     public Presenter(View ui) {
         consoleUI = ui;
-        this.service = new Service();
     }
 
-    public int addId() {
-        consoleUI.print("Введите ID игрушки");
-        int t_id = Integer.parseInt(consoleUI.read());
-        return t_id;
+    public void addToy(int t_id, String name) {
+        service.addToy(t_id, name);
     }
 
-    public String addName() {
-        consoleUI.print("Введите название игрушки");
-        String name = consoleUI.read();
-        return name;
+    public void getPrize() {
+        service.getPrize();
     }
 
-    public int addWeight() {
-        consoleUI.print("Введите вес игрушки");
-        int weight = Integer.parseInt(consoleUI.read());
-        return weight;
-    }
+
 }
 
 
